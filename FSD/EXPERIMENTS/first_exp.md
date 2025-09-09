@@ -5,7 +5,7 @@ Create the below registration form using forms in HTML.
 
 ## Output Design:
 
-![Form Design](form.png)
+![Form Design](images/form.png)
 
 ## HTML Code:
 
