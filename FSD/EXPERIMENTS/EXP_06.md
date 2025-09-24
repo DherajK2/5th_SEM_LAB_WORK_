@@ -50,9 +50,9 @@ Number of top students with CGPA >= 9: 2
 
 ## Explanation:
 
-- **`map()`**: Converts marks to CGPA by dividing marks by 10.
-- **`filter()`**: Filters students with CGPA ≥ 9.
-- **`reduce()`**: Counts how many students have CGPA ≥ 9.
+- **`map()`**: For converting marks to CGPA by dividing marks by 10.
+- **`filter()`**: For Filtering students with CGPA ≥ 9.
+- **`reduce()`**: For counting how many students have CGPA ≥ 9.
 - **`.toFixed(2)`**: Used during output to format CGPA to two decimal places. This ensures consistent display like `9.00` instead of just `9`.
 
 ---
