@@ -16,19 +16,19 @@ const students = [
   { name: "Siddu", marks: 97 }
 ];
 
-// Step 1: Convert marks to CGPA (divide by 10)
+// Convert marks to CGPA (with 2 decimal places) using parseFloat
 const studentsWithCGPA = students.map(student => ({
   name: student.name,
-  cgpa: student.marks / 10 // keeps as number, formatting is done while displaying
+  cgpa: student.marks / 10 // ensures CGPA is a number
 }));
 
-// Step 2: Filter students with CGPA >= 9
+// Filter top students with CGPA >= 9
 const topStudents = studentsWithCGPA.filter(student => student.cgpa >= 9);
 
-// Step 3: Count number of top students using reduce
+// Count of top students
 const countTopStudents = topStudents.reduce((count, _) => count + 1, 0);
 
-// Step 4: Output the result
+// Output
 console.log("Top students with CGPA >= 9:");
 topStudents.forEach(student => {
   console.log(`${student.name} - CGPA: ${student.cgpa.toFixed(2)}`);
