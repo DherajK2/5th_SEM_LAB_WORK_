@@ -27,6 +27,15 @@ Config of Router0 FastEthernet0---> 192.168.30.1 port staus on
 
 in cli 
 
+Router> enable
+Router# configure terminal
+Router(config)# service dhcp
+Router(config)# ip dhcp excluded-address 192.168.30.1 192.168.30.10
+Router(config)# ip dhcp pool pool1
+Router(dhcp-config)# network 192.168.30.0 255.255.255.0
+Router(dhcp-config)# default-router 192.168.30.1
+Router(dhcp-config)# dns-server 192.168.30.1
+Router(dhcp-config)# exit
 
 
 
