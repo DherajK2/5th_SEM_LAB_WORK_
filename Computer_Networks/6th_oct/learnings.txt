@@ -1,1 +1,83 @@
 
+create 2 pc and switch and router 
+2 times
+
+
+
+fa0/0
+192.168.16.1--->  ro
+172.16.1.1 r1
+
+
+
+assign pc0,pc1 
+192.168.16.100
+192.168.16.100
+
+192.168.16.1 ---> default gateway
+
+assign pc2pc3
+
+172.16.1.100
+172.16.1.101
+
+172.16.1.1 ---> default gateway
+
+
+
+click on router0
+physical switch off
+wic-1T drag to down and that sloter  too empty slot in router same for roter 1
+
+
+
+
+now from connections take serial DTE for two roter 
+
+
+NOW CLI of Rouer 1
+Router>enable
+Router#configure terminal
+Enter configuration commands, one per line. End with CNTL/2.
+Router(config)#interface Serial0/0/0
+Router(config-if)#
+Router(config-if)#exit
+Router(config)#interface Serial0/0/0
+Router(config-if)#ip address 10.0.0.1 255.0.0.0
+Router(config-if)#no shutdown
+
+
+
+
+
+NOW CLI of Rouer 2
+Router>enable
+Router#configure terminal
+Enter configuration commands, one per line. End with CNTL/2.
+Router(config)#interface Serial0/0/0
+Router(config-if)#
+Router(config-if)#exit
+Router(config)#interface Serial0/0/0
+Router(config-if)#ip address 10.0.0.2 255.0.0.0
+Router(config-if)#no shutdown
+
+
+
+For Router 0
+Router(config-if)#exit
+Router(config)#ip route 172.16.0.0 255.255.0.0
+10.0.0.2
+Router(config)#exit
+
+For Router 1
+Router(config-if)#exit
+Router(config)#ip route 192.168.16.0 255.255.0.0 10.0.0.1
+Router(config)#exit
+
+
+
+
+
+
+Experiment 2nd
+
