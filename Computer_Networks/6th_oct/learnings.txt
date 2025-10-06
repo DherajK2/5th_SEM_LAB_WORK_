@@ -81,3 +81,29 @@ Router(config)#exit
 
 Experiment 2nd
 
+
+Now on serial DTE 
+
+Drag and drop 
+
+
+Assign pc0,pc1 with 192.168.16.20
+192.168.16.30
+
+default address 192.168.16.1
+
+router 0 also 192.168.16.1
+
+
+assign pc2,pc3
+192.168.18.20
+192.168.18.20
+
+
+default address 192.168.18.1
+
+router 0 also 192.168.18.1
+
+
+
+Click on 
