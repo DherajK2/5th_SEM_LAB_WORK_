@@ -79,6 +79,8 @@ Write a JavaScript program to perform the following DOM manipulations:
 ### 🖼️ Initial Screen:
 Before performing any actions — the page loads with normal paragraphs, list items, and default button text.
 
+---
+
 ![Initial Screen](./images/EXP_7.1.png)
 
 ---
