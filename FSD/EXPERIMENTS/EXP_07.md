@@ -76,14 +76,27 @@ Write a JavaScript program to perform the following DOM manipulations:
 
 ## Output:
 
+### 🖼️ Initial Screen:
+Before performing any actions — the page loads with normal paragraphs, list items, and default button text.
+
+![Initial Screen](./images/EXP_7.1.png)
+
+---
+
 When the **"Apply Changes"** button is clicked:
 - The background color of the main heading (`<h3>`) changes to **yellow**.  
 - All list items (`<li>`) — HTML, CSS, JavaScript — change their text color to **blue**.  
 - All paragraphs’ font size increases.  
 - The first element with class `.topicHeading` updates its text to **“Updated Topic: Web Development.”**
 
+![After Apply Changes](./images/EXP_7.2.png)
+
+---
+
 When the **"Change Button Text"** button is clicked:
 - All buttons on the page change their text to **“Clicked!”**.
+
+![After Button Changer](./images/EXP_7.3.png)
 
 ---
 
