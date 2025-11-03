@@ -1,0 +1,91 @@
+Wired and Wireless Connections
+
+Connect 2 Pc to Switch0 and Router0 All through the Fast Ethernet (Via Copper Straight)
+
+From, Wireless Device Select WRT300N
+
+Connect Router0(1841) with Wrt300N (via Copper straight ) through Ethernet Port (Very Imp)
+
+Assign IP address for PC0-->
+Ip: 192.168.16.2
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.16.1
+
+
+Assign IP address for PC1-->
+Ip: 192.168.16.3
+Subnet Mask: 255.255.255.0
+Default Gateway: 192.168.16.1
+
+
+Now in Router 0 --> Click on Config
+In fastEthernet 0
+Port on
+Ip: 192.168.16.1
+Subnet Mask : 
+
+
+
+In fastEthernet 1
+Port on
+Ip: 192.168.20.1
+Subnet Mask : 
+
+
+In all PC n wireless side (Right) 
+
+all the Physical remove  the Wired Module 
+For pc switch off and remove the bottom port drag to bottom and select WPC300N
+
+switch oN
+
+all the Physical remove  the Wired Module 
+For pc switch off and remove the bottom port drag to bottom and select WPC300N
+
+switch oN
+
+
+
+Now click on wrt300N
+config
+
+Three settings to be changed
+1.Internet
+-> Dynamic to Static
+Give Gateway address to 192.168.20.1
+
+2. LAN
+IP : 192.168.20.2
+
+3. Wireless ---> ssid remove default and type cse123
+In wep ---> 12345fffff    (This should be in hexa decimal)
+
+Now assign Ip address for all Pc at right with 
+
+Pc2
+Ip: 192.168.20.3
+Default Gateway : 192.168.20.1
+Laptop
+Ip: 192.168.20.4
+Default Gateway : 192.168.20.1
+
+Pc3
+
+Ip: 192.168.20.4
+Default Gateway : 192.168.20.1
+
+
+
+Now Click on Pc2
+Desktop--> Pc wireless
+Click on Connect --> See Signal Strength
+Click connect ---> Type in Wep 12345fffff ---. click on connect
+
+
+Do this for all the setup in right side
+
+There will be dashed lines appearing in all the Pc in right to wireless router 
+
+Now check with connectivity for all 
+ping from  left to right 
+
