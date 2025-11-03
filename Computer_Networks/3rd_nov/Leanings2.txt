@@ -1,0 +1,25 @@
+2 pcs with 
+Switch 
+
+Two Servers from devices
+
+namings in pc0 --> 192.168.1.2
+pc1 --> 192.168.1.3
+
+For Server0 pc0 --> 192.168.1.1
+For Server1 pc1 --> pc0 --> 192.168.1.4
+
+Connect all the Pc and server to Switch(via Ethernet Copper stright Through)
+
+Now click on server 1 services --> HTTP edit the index.html click on save 
+Now Click on server 0 Services 
+DNS Service On add gmail.com
+Ip: 192.168.1.4
+
+click on add and click on gmail.com (blue)
+save 
+
+now from pc0 go to web browser type in http:gmail.com
+Now Hello World will appear
+
+
