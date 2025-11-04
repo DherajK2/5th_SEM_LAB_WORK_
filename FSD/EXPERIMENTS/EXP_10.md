@@ -50,7 +50,7 @@ export default ReactHookie;
 
 ```javascript
 import React from 'react';
-import ReactHookie from './Lab_pro/ReactHookie';
+import ReactHookie from './ReactHookie';
 
 function App() {
   return (
