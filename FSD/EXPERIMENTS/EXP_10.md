@@ -76,6 +76,9 @@ with an input field and a button.
 
 ***
 
+![Initial Screen](./images/EXP_10.1.png)
+![Final Screen](./images/EXP_10.2.png)
+
 ### 🔄 User Interaction
 
 - When the user types a new value (e.g., `21`) into the input field and clicks **Update Age**:
