@@ -1,4 +1,11 @@
 # Lab Cycle - Experiment 11
+---
+## Question)
+-Write a react program to create a list of departments and iterate through all the
+elements of the list and return an unordered list with each department as a list item
+using a function component.
+
+---
 
 ## Aim:
 
