@@ -1,0 +1,59 @@
+You're missing the BrowserRouter wrapper.
+Without it, Link/Routes/Route won't work and you'll get routing errors.
+
+✅ Install React Router
+npm install react-router-dom
+
+✅ Correct App.js (with BrowserRouter)
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Home from './Home';
+import Contact from './Contact';
+import About from './About';
+
+function App(){
+  return(
+    <BrowserRouter>
+      <div>
+        <h1>Student Portal</h1>
+
+        <nav>
+          <Link to="/">Home</Link> |{" "}
+          <Link to="/about">About</Link> |{" "}
+          <Link to="/contact">Contact</Link>
+        </nav>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+
+✅ Pages
+
+Home.js
+
+export default function Home(){
+  return <h2>This is Home page</h2>;
+}
+
+
+About.js
+
+export default function About(){
+  return <h2>This is About page</h2>;
+}
+
+
+Contact.js
+
+export default function Contact(){
+  return <h2>This is Contact page</h2>;
+}
+
