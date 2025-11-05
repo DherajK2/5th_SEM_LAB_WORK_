@@ -49,7 +49,6 @@ import Counter from './Counter';
 function App() {
   return (
     <div>
-      {/* <ReactHookie age={10} /> */}
       <Counter/>
     </div>
   );
