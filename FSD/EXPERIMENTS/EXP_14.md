@@ -48,22 +48,7 @@ fileOps.readFile("sample.txt");
 ```
 ---
 
-## ▶️ How to Run
 
-Make sure Node.js is installed.
-
-Save both files in the same folder:
-
-fileOperations.js
-
-app.js
-
-Open terminal in that folder.
-
-Run the command:
-
-node app.js
----
 
 ## ✅ Output
 Data written successfully
