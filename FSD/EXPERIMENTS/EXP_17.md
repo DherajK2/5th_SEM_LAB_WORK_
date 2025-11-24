@@ -48,6 +48,8 @@ server.listen(8000, () => {
 
 Status code **200** indicates a successful response, while **404** indicates that the requested resource was not found.[web:30][web:12]  
 
+![Initial Screen](./images/EXP_17.1.png)
+![Initial Screen](./images/EXP_17.2.png)
 ---
 
 ## Explanation
