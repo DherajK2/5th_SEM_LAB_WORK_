@@ -25,7 +25,7 @@ app.use(express.json());
 // MongoDB connection
 mongoose.connect("mongodb://127.0.0.1:27017/courseDB");
 
-// Schema
+// Course Schema with validation
 const Course = mongoose.model("Course", {
   courseName: { type: String, required: true },
   faculty: { type: String, required: true },
@@ -33,42 +33,47 @@ const Course = mongoose.model("Course", {
   studentsEnrolled: { type: Number, required: true }
 });
 
-// Add course
+// CREATE course
 app.post("/courses", async (req, res) => {
   const course = await Course.create(req.body);
-  res.send(course);
+  res.json(course);
 });
 
-// View all courses
+// VIEW all courses
 app.get("/courses", async (req, res) => {
-  res.send(await Course.find());
+  const courses = await Course.find();
+  res.json(courses);
 });
 
-// Update course
+// UPDATE course (validators enabled)
 app.put("/courses/:id", async (req, res) => {
-  const course = await Course.findByIdAndUpdate(
+  const updatedCourse = await Course.findByIdAndUpdate(
     req.params.id,
     req.body,
-    { new: true }
+    { new: true, runValidators: true }
   );
-  res.send(course);
+  res.json(updatedCourse);
 });
 
-// Delete course
+// DELETE course
 app.delete("/courses/:id", async (req, res) => {
   await Course.findByIdAndDelete(req.params.id);
   res.send("Course deleted");
 });
 
-// Total students
+// TOTAL students across all courses
 app.get("/courses/totalStudents", async (req, res) => {
   const courses = await Course.find();
   let total = 0;
   courses.forEach(c => total += c.studentsEnrolled);
-  res.send({ totalStudents: total });
+  res.json({ totalStudents: total });
 });
 
-app.listen(3000, () => console.log("Server started"));
+// Start server
+app.listen(3000, () => {
+  console.log("Server started on port 3000");
+});
+
 ```
 
 
