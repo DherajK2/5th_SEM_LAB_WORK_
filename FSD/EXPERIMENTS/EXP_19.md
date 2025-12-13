@@ -7,7 +7,7 @@ Demonstrate MongoDB operations using Mongo shell and database tools to:
 1. Switch to the `WorkDB` database.
 2. Create a `teachers` collection.
 3. Insert documents with fields `name`, `subject`, and `experience`.
-4. Export the `students` collection to a JSON file.
+4. Export the `teachers` collection to a JSON file.
 5. Import the JSON file into a new collection `studentsBackup`.[^1][^2][^3][^4][^5][^6]
 
 ***
