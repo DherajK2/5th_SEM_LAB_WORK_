@@ -2,11 +2,23 @@
 
 ## Aim:
 
-Design a registration form using HTML and JavaScript that:
-
-1. Collects Username, Email, Mobile Number, Password, Confirm Password, Branch (dropdown), Profile Picture, and Register/Reset buttons.
-2. Validates each field with appropriate rules and shows error messages next to each field.
-3. After successful validation, displays the user details in a formatted card using DOM elements (including the uploaded profile picture).[^1][^2][^3][^4]
+1. Username
+2. Email
+3. Mobile Number
+4. Password
+5. Confirm Password
+6. Branch Selection (dropdown)
+7. Upload Profile Picture
+8. Register and Reset buttons
+---
+- Write a JavaScript program that validates:
+i. Username must be at least 6 characters.
+ii. Email must follow correct format.
+iii. Mobile number must contain exactly 10 digits.
+iv. Password must include letters and numbers.
+v. Confirm Password must match.
+vi. Error messages should appear next to each field.
+vii. After successful validation, display the user details in a formatted card using DOM elements.
 
 ***
 
