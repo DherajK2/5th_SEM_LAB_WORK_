@@ -26,7 +26,7 @@ Design a registration form using HTML and JavaScript that:
 
 <form id="regForm">
 
-    Username:
+    Username: 
     <input type="text" id="username">
     <span id="uError"></span><br><br>
 
@@ -57,7 +57,7 @@ Design a registration form using HTML and JavaScript that:
     <span id="bError"></span><br><br>
 
     Upload Profile Picture:
-    <input type="file" id="photo" accept="image/*">
+    <input type="file" id="photo">
     <span id="photoError"></span><br><br>
 
     <button type="button" onclick="validateForm()">Register</button>
@@ -70,17 +70,19 @@ Design a registration form using HTML and JavaScript that:
 <div id="result"></div>
 
 <script>
+
 function validateForm() {
-    // Get values
-    let username = document.getElementById("username").value.trim();
-    let email = document.getElementById("email").value.trim();
-    let mobile = document.getElementById("mobile").value.trim();
+
+    // Getting form values
+    let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
+    let mobile = document.getElementById("mobile").value;
     let password = document.getElementById("password").value;
     let confirmPassword = document.getElementById("confirmPassword").value;
     let branch = document.getElementById("branch").value;
-    let photo = document.getElementById("photo").files[^0];
+    let photo = document.getElementById("photo").files[0];
 
-    // Clear previous errors and result
+    // Clearing old error messages
     document.getElementById("uError").innerHTML = "";
     document.getElementById("eError").innerHTML = "";
     document.getElementById("mError").innerHTML = "";
@@ -88,84 +90,80 @@ function validateForm() {
     document.getElementById("cError").innerHTML = "";
     document.getElementById("bError").innerHTML = "";
     document.getElementById("photoError").innerHTML = "";
-    document.getElementById("result").innerHTML = "";
 
     let valid = true;
 
-    // i. Username must be at least 6 characters
+    // Username validation
     if (username.length < 6) {
-        document.getElementById("uError").innerHTML =
-            "Username must be at least 6 characters.";
+        document.getElementById("uError").innerHTML = "Username must be at least 6 characters.";
         valid = false;
     }
 
-    // ii. Email format
-    let emailPattern = /^[^ ]+@[^ ]+\.[a-zA-Z]{2,}$/;
+    // Email validation
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
     if (!email.match(emailPattern)) {
         document.getElementById("eError").innerHTML = "Invalid email format.";
         valid = false;
     }
 
-    // iii. Mobile must contain exactly 10 digits
+    // Mobile number validation
     if (!/^\d{10}$/.test(mobile)) {
-        document.getElementById("mError").innerHTML =
-            "Mobile number must contain exactly 10 digits.";
+        document.getElementById("mError").innerHTML = "Mobile must contain 10 digits.";
         valid = false;
     }
 
-    // iv. Password must include letters and numbers
+    // Password validation
     let passPattern = /^(?=.*[A-Za-z])(?=.*\d).+$/;
     if (!password.match(passPattern)) {
-        document.getElementById("pError").innerHTML =
-            "Password must include letters and numbers.";
+        document.getElementById("pError").innerHTML = "Password must include letters and numbers.";
         valid = false;
     }
 
-    // v. Confirm Password must match
+    // Confirm Password
     if (password !== confirmPassword) {
-        document.getElementById("cError").innerHTML =
-            "Passwords do not match.";
+        document.getElementById("cError").innerHTML = "Passwords do not match.";
         valid = false;
     }
 
     // Branch selection
     if (branch === "") {
-        document.getElementById("bError").innerHTML =
-            "Please select a branch.";
+        document.getElementById("bError").innerHTML = "Please select a branch.";
         valid = false;
     }
 
-    // Photo selection
+    // Photo validation
     if (!photo) {
-        document.getElementById("photoError").innerHTML =
-            "Please upload a profile picture.";
+        document.getElementById("photoError").innerHTML = "Please upload a photo.";
         valid = false;
     }
 
-    if (!valid) return; // stop if any validation failed
+    // If validation fails → stop
+    if (!valid) return;
 
-    // If all validations pass, display user card using DOM + FileReader
+    // If validation succeeds → display user card
     let reader = new FileReader();
 
-    reader.onload = function (e) {
-        document.getElementById("result").innerHTML =
-            "<h3>User Details</h3>" +
-            "<div>" +
-            "<img src='" + e.target.result +
-            "' width='100' height='100'><br>" +
-            "<strong>Username:</strong> " + username + "<br>" +
-            "<strong>Email:</strong> " + email + "<br>" +
-            "<strong>Mobile:</strong> " + mobile + "<br>" +
-            "<strong>Branch:</strong> " + branch + "<br>" +
-            "</div>";
+    reader.onload = function(e) {
+        document.getElementById("result").innerHTML = `
+            <h3>User Details</h3>
+            <div>
+                <img src="${e.target.result}" width="100" height="100"><br>
+                <strong>Username:</strong> ${username}<br>
+                <strong>Email:</strong> ${email}<br>
+                <strong>Mobile:</strong> ${mobile}<br>
+                <strong>Branch:</strong> ${branch}<br>
+            </div>
+        `;
     };
 
     reader.readAsDataURL(photo);
 }
+
 </script>
 
 </body>
 </html>
+
 ```
 
 
