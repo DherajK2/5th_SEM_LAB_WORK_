@@ -22,7 +22,7 @@ Write a JavaScript program that demonstrates handling events from different HTML
     <title>JavaScript Event Handling Example</title>
 </head>
 
-<body style="padding: 20px;">
+<body>
 
     <h2>JavaScript Event Handling Example</h2>
 
@@ -109,10 +109,17 @@ Write a JavaScript program that demonstrates handling events from different HTML
 ## Output
 
 - Initial page with button, text box, and password field.
+  ![Initial Screen](./images/EXP_4.1.png)
+
 - After clicking the button: text changes to “Clicked!” and success message appears.
+    ![2nd Screen](./images/EXP_4.2.png)
+
 - When clicking anywhere on the body, an alert box appears.
+   ![3rd Screen](./images/EXP_4.3.png)
 - While typing in the text box, the paragraph below shows “You typed: …”.
+  ![4th Screen](./images/EXP_4.4.png)
 - Password field showing Weak / Medium / Strong based on length.
+  ![5th Screen](./images/EXP_4.5.png)
 
 ***
 
@@ -132,21 +139,4 @@ Write a JavaScript program that demonstrates handling events from different HTML
 3. **How can you change the text of an HTML element using JavaScript?**
 4. **Why is `oninput` better than `onchange` for real-time password strength checking?**
 5. **How would you extend this example to check for special characters or numbers in the password for a more accurate strength check?**
-<span style="display:none">[^1][^2][^3][^4][^5][^6][^7]</span>
-
-<div align="center">⁂</div>
-
-[^1]: EXP_4.1.jpg
-
-[^2]: EXP_4.3.jpg
-
-[^3]: EXP_4.2.jpg
-
-[^4]: EXP_4.4.jpg
-
-[^5]: EXP_4.5.jpg
-
-[^6]: EXP_4.6.jpg
-
-[^7]: EXP_4.7.jpg
 
