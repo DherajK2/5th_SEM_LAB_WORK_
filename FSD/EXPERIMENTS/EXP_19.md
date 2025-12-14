@@ -8,7 +8,7 @@ Demonstrate MongoDB operations using Mongo shell and database tools to:
 2. Create a `teachers` collection.
 3. Insert documents with fields `name`, `subject`, and `experience`.
 4. Export the `teachers` collection to a JSON file.
-5. Import the JSON file into a new collection `studentsBackup`.[^1][^2][^3][^4][^5][^6]
+5. Import the JSON file into a new collection `teachersBackup`.[^1][^2][^3][^4][^5][^6]
 
 ***
 ***
@@ -43,11 +43,11 @@ db.teachers.insert({
 
 // 4. EXPORT students collection to JSON (run in terminal / CMD, not in mongosh)
 // Command:
- // mongoexport --db=WorkDB --collection=students --out=students.json
+ // mongoexport --db=WorkDB --collection=students --out=teachers.json
 
 // 5. IMPORT JSON file into new collection 'studentsBackup' (terminal / CMD)
 // Command:
- // mongoimport --db=WorkDB --collection=studentsBackup --file=students.json
+ // mongoimport --db=WorkDB --collection=teachersBackup --file=teachers.json
 ```
 
 
